@@ -62,3 +62,20 @@ box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d !important;}
 }
 
 .productsSlider .swiper-wrapper{padding: 15px; margin-left: -15px; margin-right: -15px}
+
+.btn-org{
+    background: #ff5252 !important;
+    color: #fff !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    padding: 7px 20px !important;
+}
+
+.css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.Mui-checked, .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+    color:red !important;
+}
+
+.MuiFormControlLabel-label{
+    font-size: 13px !important;
+     color: rgba(0,0,0,0.8)
+}

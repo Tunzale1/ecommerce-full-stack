@@ -1,16 +1,37 @@
 import '../ProductItem/style.css';
 import Rating from '@mui/material/Rating';
 import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import { FaRegHeart } from "react-icons/fa6";
+import { IoGitCompareOutline } from "react-icons/io5";
+import { MdZoomOutMap } from "react-icons/md";
 
 
 const ProductItem = () => {
   return (
     <>
-    <Link to='/'>
+    
     <div className='productItem shadow-lg rounded-md overflow-hidden border-1 border-[rgba(0,0,0,0.2)]'>
-        <div className='imgWrapper w-[100%] h-[250px] overflow-hidden rounded-md relative'>
-            <img src="https://m.media-amazon.com/images/I/61glUTGQnUL._AC_SY200_.jpg" className='w-full h-full object-cover' alt="product"/>
-            <span className='discount flex items-center absolute top-[10px] left-[10px] z-'></span>
+        <div className='group imgWrapper w-[100%] overflow-hidden rounded-md relative'>
+            <Link to='/'>
+                <div className='img h-[220px] overflow-hidden'>
+                    <img src="https://m.media-amazon.com/images/I/61glUTGQnUL._AC_SY200_.jpg" className='w-full h-full object-cover' alt="product"/>
+                    <img src="https://m.media-amazon.com/images/I/71MGLr6Xi-L._AC_SY200_.jpg" className='w-full h-full object-cover transition-all duration-300 absolute top-0 left-0 opacity-0 group-hover:opacity-100' alt="product"/>
+                </div>
+            </Link>
+            <span className='discount flex items-center absolute top-[10px] left-[10px] z-50 bg-[#ff5252] text-white rounded-lg p-1 text-[12px] font-[500]'>10%</span>
+            <div className='actions absolute top-[-200px] right-[5px] z-50 flex items-center gap-4 flex-col w-[50px] transition-all duration-700 group-hover:top-[15px] opacity-0 group-hover:opacity-100 group-hover:scale-105'>
+            <Button className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white !text-black hover:!bg-[#ff5252] group'>
+                <FaRegHeart className='text-[20px] !text-black'/>
+            </Button>
+            <Button className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white !text-black hover:!bg-[#ff5252] group'>
+                <IoGitCompareOutline className='text-[20px] !text-black '/>
+            </Button>
+            <Button className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white !text-black hover:!bg-[#ff5252] group'>
+                <MdZoomOutMap className='text-[20px] !text-black'/>
+            </Button>
+            </div>
+            
         </div>
         <div className='info p-3 py-5 bg-[#f1f1f1]'>
             <Link to='/'>
@@ -24,7 +45,7 @@ const ProductItem = () => {
             </div>
         </div>
     </div>
-    </Link>
+    
      </>
 
   )
