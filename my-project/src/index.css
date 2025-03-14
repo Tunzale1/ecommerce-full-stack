@@ -17,7 +17,7 @@ overflow-x: hidden;}
 nav ul button{text-transform: capitalize !important;}
 nav ul button:hover{background: none !important;}
 
-.sliderHome, .homeCatSlider{
+.homeCatSlider{
     overflow:inherit !important;
 }
 .swiper-button-prev, .swiper-button-next{
@@ -78,4 +78,25 @@ box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d !important;}
 .MuiFormControlLabel-label{
     font-size: 13px !important;
      color: rgba(0,0,0,0.8)
+}
+
+.swiper-pagination-bullet-active {
+    background: #ff5252 !important;
+}
+
+.ReactCollapse--collapse {
+    transition: height 500ms;
+  }
+
+.range-slider{
+    height: 3px !important;
+}  
+
+.range-slider .range-slider__thumb{
+    width: 14px !important;
+    height: 14px !important;
+    background: #ff5252 !important;
+}
+.range-slider .range-slider__range{
+    background: #ff5252 !important;
 }

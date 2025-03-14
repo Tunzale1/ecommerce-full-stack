@@ -1,8 +1,11 @@
 import AdsBannerSlider from '../../components/AdsBannerSlider';
+import AdsBannerSliderV2 from '../../components/AdsBannerSliderV2';
+
 import HomeCatSlider from '../../components/CatSlider';
 import HomeSlider from '../../components/HomeSlider';
+import BannerBoxV2 from '../../components/BannerBoxV2';
 
-import Footer from '../../components/Footer';
+import Navigation from '../../components/Header/Navigation';
 
 import { LiaShippingFastSolid } from "react-icons/lia";
 import * as React from 'react';
@@ -21,8 +24,25 @@ const Home = () => {
 
   return (
     <>
+    <section className='bg-white py-6'>
+      <div className='container flex gap-1'>
+          <div className='part1 w-[15%]'>
+           <Navigation />
+          </div>
 
-    <HomeSlider/>
+          <div className='part2 w-[65%]'>
+          <HomeSlider/>
+          </div>
+
+          <div className='part3 w-[20%] flex items-center justify-between gap-1 flex-col'>
+          <BannerBoxV2 image={'https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/CE/GamingWeek24/Homepage/DQC/CE24_SUM_GW_DQC_NW_GamingWeek_PC_v2_1x._SY116_CB558844445_.jpg'}/>
+          <BannerBoxV2 image={'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/DskBTFQuadCards/Fuji_BTF_Quad_Cards_1x_Accessories._SY116_CB558654384_.jpg'}/>
+          </div>
+
+        </div>
+    </section>
+
+
     <HomeCatSlider/>
 
     <section className='bg-white py-5 '>
@@ -92,7 +112,6 @@ const Home = () => {
           <h2 className='text-[22px] font-[600]'>Latest Products</h2>
           <ProductsSlider items={6}/>
 
-          <AdsBannerSlider items={3}/>
 
       </div>
     </section>
@@ -102,12 +121,12 @@ const Home = () => {
           <h2 className='text-[22px] font-[600]'>Featured Products</h2>
           <ProductsSlider items={6}/>
           
-          <AdsBannerSlider items={3}/>
+          <AdsBannerSliderV2 items={3} />
 
       </div>
     </section>
 
-    <Footer />
+    
 
     </>
 )

@@ -6,7 +6,6 @@ import IconButton from '@mui/material/IconButton';
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoGitCompareOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
-import Navigation from './Navigation';
 
 
 
@@ -44,7 +43,7 @@ const Header = () => {
         <div className="header py-4  border-b border-black/10">
             <div className="container flex items-center justify-between">
                 <div className="col1-w-[25%]">
-                    <Link to={"/"}><img src="/main-logo.png"/></Link>
+                    <Link to={"/"}><img className="h-[120px] " src="/main-logo.png"/></Link>
                 </div>
                 <div className="col2 w-[45%]">
                     <Search/>
@@ -66,7 +65,7 @@ const Header = () => {
             </div>
         </div>
 
-        <Navigation/>
+        
 
     </header>
   )

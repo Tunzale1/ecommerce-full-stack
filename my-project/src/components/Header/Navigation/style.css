@@ -5,11 +5,24 @@
     z-index: 1000;
 }
 
-.nav li:hover .submenu{opacity: 1 !important; visibility: inherit; top: 100%;}
-
+.nav li:hover .submenu{opacity: 1 !important; visibility: inherit; top:100%}
 
 .nav li .submenu li .submenu{top: 0px !important; left: 120% !important; opacity: 0 !important;}
 
 .nav li .submenu li:hover .submenu{left:100% !important;opacity: 1 !important;}
 
 .nav li .submenu li .submenu button {color: rgba(0,0,0,0.9) !important;}
+
+.col_2{
+    max-height: 350px; /* Fixed height */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.col_2::-webkit-scrollbar{width: 4px !important; height: 4px !important}
+::-webkit-scrollbar-track {background: #ebebeb;}
+.col_2::-webkit-scrollbar-thumb {
+    background: #bcbcbc; 
+    max-height: 4px; /* Minimum height of the thumb */
+    border-radius: 20px; /* Optional: for rounded corners */
+  }
