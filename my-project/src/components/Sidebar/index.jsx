@@ -8,7 +8,6 @@ import { Button } from '@mui/material';
 import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
 import Rating from '@mui/material/Rating';
-import Stack from '@mui/material/Stack';
 
 
 
@@ -19,9 +18,9 @@ const Sidebar = () => {
   const [isOpenSizeFilter, setIsOpenSizeFilter] = useState(true)
 
   return (
-    <aside className="sidebar py-5">
+    <aside className="sidebar bg-[#ffffff] p-5">
       <div className="box">
-        <h3 className="w-full mb-3 text-[18px] font-600 flex items-center">Shop by Category
+        <h3 className="w-full mb-3 text-[18px] font-[600] flex items-center">Shop by Category
         <Button className="!w-[30px] !h-[30px] !min-w-[30px] !rounded-full !ml-auto !text-[#ff5252]"
         onClick={()=>setIsOpenCategoryFilter(!isOpenCategoryFilter)}>
         {
@@ -46,8 +45,8 @@ const Sidebar = () => {
 
       </div>
 
-      <div className="box mt-5 pt-3 border-t border-[#ff5252]">
-        <h3 className="w-full mb-3 text-[18px] font-600 flex items-center">Availability
+      <div className="box mt-5 pt-3 ">
+        <h3 className="w-full mb-3 text-[18px] font-[600] flex items-center">Availability
         <Button className="!w-[30px] !h-[30px] !min-w-[30px] !rounded-full !ml-auto !text-[#ff5252]"
         onClick={()=>setIsOpenAvailabilityFilter(!isOpenAvailabilityFilter)}>
         {
@@ -57,7 +56,7 @@ const Sidebar = () => {
         </h3>
        
         <Collapse isOpened={isOpenAvailabilityFilter}>
-        <div className="scroll px-3 relative -left-[10px]">
+        <div className="px-3 relative -left-[10px]">
         <FormControlLabel control={<Checkbox />} className="w-full" size="small" label="Available" />
         <FormControlLabel control={<Checkbox />} className="w-full" size="small" label="In Stock" />
         <FormControlLabel control={<Checkbox />} className="w-full" size="small" label="Not Available" />
@@ -68,8 +67,8 @@ const Sidebar = () => {
 
       </div>
 
-      <div className="box mt-5 pt-3 border-t border-[#ff5252]">
-        <h3 className="w-full mb-3 text-[18px] font-600 flex items-center">Size
+      <div className="box mt-5 pt-3 ">
+        <h3 className="w-full mb-3 text-[18px] font-[600] flex items-center">Size
         <Button className="!w-[30px] !h-[30px] !min-w-[30px] !rounded-full !ml-auto !text-[#ff5252]"
         onClick={()=>setIsOpenSizeFilter(!isOpenSizeFilter)}>
         {
@@ -79,7 +78,7 @@ const Sidebar = () => {
         </h3>
        
         <Collapse isOpened={isOpenSizeFilter}>
-        <div className="scroll px-3 relative -left-[10px]">
+        <div className="px-3 relative -left-[10px]">
         <FormControlLabel control={<Checkbox />} className="w-full" size="small" label="Small" />
         <FormControlLabel control={<Checkbox />} className="w-full" size="small" label="Medium" />
         <FormControlLabel control={<Checkbox />} className="w-full" size="small" label="Large" />
@@ -91,21 +90,21 @@ const Sidebar = () => {
 
       </div>
 
-      <div className="box mt-5 pt-3 border-t border-[#ff5252]">
-        <h3 className="w-full mb-3 text-[18px] font-600 flex items-center">Filter By Price</h3>
+      <div className="box mt-5 pt-3 ">
+        <h3 className="w-full mb-3 text-[18px] font-[600] flex items-center">Filter By Price</h3>
         <RangeSlider />
         <div className='flex pt-4 pb-2 priceRange'>
           <span className='text-[13px]'>
             From: <strong className='text-dark'> Rs: {100}</strong>
           </span>
-          <span className='ml-auto'>
+          <span className='text-[13px] ml-auto'>
             From: <strong className='text-dark'> Rs: {200}</strong>
           </span>
         </div>
       </div>
 
-      <div className="box mt-5 pt-3 border-t border-[#ff5252]">
-        <h3 className="w-full mb-3 text-[18px] font-600 flex items-center">Filter By Rating</h3>
+      <div className="box mt-5 pt-3 ">
+        <h3 className="w-full mb-3 text-[18px] font-[600] flex items-center">Filter By Rating</h3>
         <div className='w-full'><Rating name="size-small" defaultValue={5} size="small" readOnly /></div>
         <div className='w-full'><Rating name="size-small" defaultValue={4} size="small" readOnly /></div>
         <div className='w-full'><Rating name="size-small" defaultValue={3} size="small" readOnly /></div>
